@@ -1,0 +1,172 @@
+/* ======================================
+    About Us Section - Enhanced
+====================================== */
+
+/*
+    .about-container { ... } -> Container for the about section content.
+*/
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-content {
+  position: relative;
+}
+
+/*
+    .about-box { ... } -> Styles for the main introductory paragraph box.
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); -> Adds a soft shadow.
+*/
+.about-box {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.about-box p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/*
+    .about-details { ... } -> This is the collapsible section, initially hidden.
+    max-height: 0; -> The key property to collapse the element.
+    transition: max-height 0.6s ease; -> Animates the expansion and collapse.
+*/
+.about-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease;
+}
+
+/*
+    .about-expanded .about-details { ... } -> Expands the section when the 'about-expanded' class is added by JavaScript.
+    max-height: 2000px; -> A value large enough to accommodate all content.
+*/
+.about-expanded .about-details {
+  max-height: 2000px;
+}
+
+/*
+    .about-card { ... } -> Styles for the philosophy, approach, and values cards.
+*/
+.about-card {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 20px;
+}
+
+.about-card h3 {
+  color: #7b0091;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.about-card p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.about-card ul {
+  padding-left: 20px;
+}
+
+.about-card li {
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/*
+    .about-card li::before { ... } -> Adds a decorative bullet point.
+*/
+.about-card li::before {
+  content: "•";
+  color: #7b0091;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/*
+    .read-more-container { ... } -> Container for the "Read More" button, initially hidden.
+    opacity: 0; height: 0; -> Keeps the container completely hidden.
+*/
+.read-more-container {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  text-align: center;
+  transition: opacity 0.4s ease-out, height 0.4s ease-out;
+}
+
+/*
+    .read-more-container.visible { ... } -> Makes the container visible once the typewriter effect is complete.
+*/
+.read-more-container.visible {
+  opacity: 1;
+  height: 50px;
+}
+
+/*
+    .read-more-btn { ... } -> Styles for the "Read More" button.
+    transform: translateY(10px); -> Moves the button down initially so it can animate up.
+*/
+.read-more-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  color: #7b0091;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 0;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+  transform: translateY(10px);
+}
+
+.read-more-container.visible .read-more-btn {
+  transform: translateY(0);
+}
+
+.read-more-btn svg {
+  transition: transform 0.3s ease;
+}
+
+/*
+    .about-expanded .read-more-btn svg { ... } -> Rotates the SVG icon when the content is expanded.
+*/
+.about-expanded .read-more-btn svg {
+  transform: rotate(180deg);
+}
+
+.read-more-btn:hover {
+  color: #5a0070;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .about-box, .about-card {
+    padding: 20px;
+  }
+  
+  .about-box p, .about-card p {
+    font-size: 15px;
+  }
+}
