@@ -5,24 +5,24 @@
 
 // Wait for the DOM to be fully loaded before running the scripts.
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize the AOS animation library.
-    // This function is defined in animations.js, but we can call it here.
-    initAOS();
+    // Initialize the preloader first to show the loading screen.
+    // We pass a callback function to run other initializations after the preloader is complete.
+    initPreloader(() => {
+        // Initialize all modular scripts after preloader is hidden.
+        initAboutSection();
+        initServices();
+        initAchievementsCounters();
+        initTestimonialsCarousel();
+        initContactForm();
+        initFooter();
+        initAOS(); // AOS is now initialized after preloader to prevent animation issues.
 
-    // Initialize all modular scripts.
-    initPreloader();
-    initAboutSection();
-    initServices();
-    initAchievementsCounters();
-    initTestimonialsCarousel();
-    initContactForm();
-    initFooter();
-
-    // Set the current year in the footer.
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-    
-    // Smooth scrolling for navigation links.
-    smoothScroll();
+        // Set the current year in the footer.
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+        
+        // Smooth scrolling for navigation links.
+        smoothScroll();
+    });
 });
 
 // ====================================================
