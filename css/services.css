@@ -1,0 +1,325 @@
+/* ======================================
+    SERVICES SECTION - PREMIUM DESIGN
+====================================== */
+.services-section {
+    background: linear-gradient(135deg, #f9f5ff 0%, #f0e6ff 100%);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/*
+    .services-section::before { ... } -> Creates a subtle dot pattern background for decoration.
+    z-index: 0; -> Ensures the pattern is in the background.
+*/
+.services-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../images/dot-pattern.png') center/contain repeat;
+    opacity: 0.03;
+    z-index: 0;
+}
+
+.services-category {
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 1;
+}
+
+/*
+    .category-header { ... } -> Styles for the category title bar.
+    box-shadow: 0 10px 30px rgba(123, 0, 145, 0.2); -> Adds a shadow.
+*/
+.category-header {
+    background: linear-gradient(135deg, var(--primary-color), #5a0070);
+    color: #fff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 10px 30px rgba(123, 0, 145, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.category-header::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        to bottom right,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0) 60%
+    );
+    transform: rotate(30deg);
+}
+
+.category-header img {
+    width: 48px;
+    height: 48px;
+    filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+}
+
+.category-header h3 {
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    margin: 0;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/*
+    .services-container { ... } -> The main container for the services carousel.
+    backdrop-filter: blur(5px); -> Blurs the background behind the container.
+*/
+.services-container {
+    position: relative;
+    overflow: hidden;
+    height: 420px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255,255,255,0.3);
+}
+
+/*
+    .services-carousel { ... } -> The container for all service cards.
+    transform: translate(-50%, -50%); -> Centers the carousel precisely within its parent.
+*/
+.services-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+}
+
+/*
+    .service-card { ... } -> Styles for each individual service card.
+    transition: all 0.3s ease; -> Ensures smooth transitions for hover effects and animations.
+*/
+.service-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 380px;
+    height: 340px;
+    min-height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
+    border: 1px solid rgba(123, 0, 145, 0.1);
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(123, 0, 145, 0.2);
+}
+
+.card-content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content h4 {
+    font-family: 'Neuton', serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.card-content h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    border-radius: 3px;
+}
+
+.card-content p {
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.service-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 20px;
+}
+
+.service-card h4 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+/* Card Positions (These classes are added by the JavaScript for the carousel animation) */
+.service-card.left {
+    transform: translate(-150%, -50%) scale(0.7) rotateY(30deg);
+    opacity: 0.6;
+    z-index: 1;
+    filter: blur(1px);
+}
+
+.service-card.center {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+    z-index: 10;
+    filter: none;
+}
+
+.service-card.right {
+    transform: translate(50%, -50%) scale(0.7) rotateY(-30deg);
+    opacity: 0.6;
+    z-index: 1;
+    filter: blur(1px);
+}
+
+/* .service-card.active { ... } -> Adds an extra highlight for the center card */
+.service-card.active {
+    box-shadow: 0 0 30px 5px rgba(123, 0, 145, 0.2);
+    transform: translate(-50%, -50%) scale(1.15) translateY(-5px);
+}
+
+/* Animation Classes */
+.service-card.leaving-left {
+    transform: translate(-200%, -50%) scale(0.6) rotateY(45deg);
+    opacity: 0;
+}
+
+.service-card.entering-right {
+    transform: translate(150%, -50%) scale(0.6) rotateY(-45deg);
+    opacity: 0;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    z-index: 100;
+    pointer-events: none;
+}
+
+/* .carousel-nav button { ... } -> Styles for the navigation buttons */
+.carousel-nav button {
+    pointer-events: auto;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(123, 0, 145, 0.3);
+}
+
+.carousel-nav .carousel-prev {
+    margin-left: -10px;
+}
+
+.carousel-nav .carousel-next {
+    margin-right: -10px;
+}
+
+.carousel-nav button:hover {
+    background: var(--secondary-color);
+    transform: scale(1.1);
+}
+
+.carousel-nav button svg {
+    width: 24px;
+    height: 24px;
+}
+
+.carousel-nav button {
+    font-size: 24px;
+}
+
+/* Mobile Services */
+@media (max-width: 767px) {
+    .services-container {
+        height: 380px;
+    }
+    
+    .service-card {
+        width: 300px;
+        min-height: 280px;
+        padding: 25px;
+    }
+    
+    .service-card.left {
+        transform: translate(-130%, -50%) scale(0.7);
+    }
+    
+    .service-card.right {
+        transform: translate(30%, -50%) scale(0.7);
+    }
+    
+    .category-header h3 {
+        font-size: 22px;
+    }
+    
+    .carousel-nav button {
+        width: 40px;
+        height: 40px;
+    }
+}
