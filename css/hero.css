@@ -1,0 +1,65 @@
+/* ======================================
+    Hero Section
+====================================== */
+
+/*
+    .hero { ... } -> Styles for the hero section with a dynamic background.
+    background-size: cover; -> Scales the background image to cover the entire container.
+    transition: background-image 1s ease-in-out; -> Smoothly transitions the background image when it changes.
+*/
+.hero {
+    background: url('../images/hero-bg1.jpg') no-repeat center center;
+    background-size: cover;
+    color: #fff;
+    height: 550px;
+    overflow: hidden;
+    padding: 100px 20px;
+    position: relative;
+    text-align: center;
+    transition: background-image 1s ease-in-out;
+}
+
+/*
+    .hero-bg::after { ... } -> Creates a semi-transparent overlay to make the text more readable.
+*/
+.hero-bg::after {
+    background: rgba(0, 0, 0, 0.4);
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+/*
+    .hero-title-img { ... } -> Styles for the hero title image.
+*/
+.hero-title-img {
+    display: block;
+    height: 360px;
+    margin: -150px auto 20px auto;
+}
+
+/*
+    .explore-btn { ... } -> Styles for the "Explore Services" button.
+    background: linear-gradient(...); -> Applies a gradient to the button.
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4); -> Adds a shadow for a 3D effect.
+*/
+.explore-btn {
+    background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+    color: white;
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 600;
+    margin: 50px auto 0 auto;
+    padding: 10px 24px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.explore-btn:hover {
+    background: linear-gradient(45deg, var(--accent-color), var(--secondary-color));
+}
