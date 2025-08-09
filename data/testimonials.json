@@ -1,0 +1,88 @@
+{
+  "testimonials": [
+    {
+      "clientName": "Rahul Sharma",
+      "clientRole": "CEO, TechStart Solutions",
+      "clientImage": "images/client1.jpg",
+      "rating": 5,
+      "text": "Nedits transformed our brand identity completely. Our social media engagement skyrocketed!"
+    },
+    {
+      "clientName": "Priya Patel",
+      "clientRole": "Founder, StyleHub",
+      "clientImage": "images/client2.jpg",
+      "rating": 5,
+      "text": "Their e-commerce design gave us a 45% boost in conversions. Amazing eye for detail!"
+    },
+    {
+      "clientName": "Arjun Mehta",
+      "clientRole": "Content Creator",
+      "clientImage": "images/client3.jpg",
+      "rating": 5,
+      "text": "We gained over 90k new subscribers thanks to their editing and thumbnail design!"
+    },
+    {
+      "clientName": "Neha Gupta",
+      "clientRole": "Marketing Director, UrbanFashion",
+      "clientImage": "images/client4.jpg",
+      "rating": 4,
+      "text": "Nedits delivered a smart marketing strategy that really helped scale our product."
+    },
+    {
+      "clientName": "Vikram Joshi",
+      "clientRole": "CTO, FinTech Labs",
+      "clientImage": "images/client5.jpg",
+      "rating": 5,
+      "text": "Great UI/UX and development. The app reached 50,000 downloads within weeks!"
+    },
+    {
+      "clientName": "Ananya Reddy",
+      "clientRole": "Founder, HealthPlus",
+      "clientImage": "images/client6.jpg",
+      "rating": 5,
+      "text": "Nedits' social media team brought 5x more leads than our previous agency."
+    },
+    {
+      "clientName": "Rohan Kapoor",
+      "clientRole": "Co-Founder, EcoWave",
+      "clientImage": "images/client7.jpg",
+      "rating": 4,
+      "text": "Clean branding, fast delivery. Slight delay in revisions, but excellent output."
+    },
+    {
+      "clientName": "Tanvi Desai",
+      "clientRole": "Brand Manager, AuraCosmetics",
+      "clientImage": "images/client8.jpg",
+      "rating": 5,
+      "text": "Love their designs! Every graphic felt customized to our brand’s voice."
+    },
+    {
+      "clientName": "Kabir Arora",
+      "clientRole": "Founder, QuickKitchen",
+      "clientImage": "images/client9.jpg",
+      "rating": 3,
+      "text": "Good work overall. Some issues with initial drafts, but they fixed everything professionally."
+    },
+    {
+      "clientName": "Isha Verma",
+      "clientRole": "Social Media Head, BloomKids",
+      "clientImage": "images/client10.jpg",
+      "rating": 5,
+      "text": "Creative, fast, and professional. Our brand’s Instagram now looks stunning."
+    },
+    {
+      "clientName": "Nikhil Sen",
+      "clientRole": "Product Manager, FlexFit",
+      "clientImage": "images/client11.jpg",
+      "rating": 4,
+      "text": "Very happy with the outcome. Communication was smooth, delivery on point."
+    },
+    {
+      "clientName": "Sneha Bhatt",
+      "clientRole": "Founder, ArtTales",
+      "clientImage": "images/client12.jpg",
+      "rating": 5,
+      "text": "Nedits is our go-to for all visual needs. They just get our aesthetic every time."
+    }
+  ]
+}
