@@ -1,0 +1,29 @@
+{
+    "socialLinks": [
+        {
+            "platform": "Facebook",
+            "url": "#",
+            "icon": "facebook.svg"
+        },
+        {
+            "platform": "Instagram",
+            "url": "#",
+            "icon": "instagram.svg"
+        },
+        {
+            "platform": "Twitter",
+            "url": "#",
+            "icon": "twitter.svg"
+        },
+        {
+            "platform": "LinkedIn",
+            "url": "#",
+            "icon": "linkedin.svg"
+        },
+        {
+            "platform": "YouTube",
+            "url": "#",
+            "icon": "youtube.svg"
+        }
+    ]
+}
