@@ -1,0 +1,110 @@
+/* ======================================
+    Skills Orbit Section
+====================================== */
+
+/*
+    .skills-orbit { ... } -> Styles for the skills section.
+*/
+.skills-orbit {
+    text-align: center;
+    padding: 80px 20px;
+    background: #fff;
+}
+
+.skills-orbit .section-title {
+    color: var(--text-color);
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+}
+
+/*
+    .orbit-container { ... } -> The container for the spinning orbits.
+*/
+.orbit-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+}
+
+/*
+    .center-sun { ... } -> Styles for the central "We" element.
+    box-shadow: 0 0 25px ...; -> Creates a glowing effect.
+*/
+.center-sun {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    line-height: 80px;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 25px var(--primary-color), 0 0 60px var(--primary-color);
+    z-index: 2;
+}
+
+/*
+    .orbit { ... } -> Styles for the rotating orbit rings.
+    border: 1px dashed ...; -> Creates a dashed line effect.
+    animation: rotate linear infinite; -> Applies the rotation animation.
+*/
+.orbit {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: 1px dashed rgba(123, 0, 145, 0.6);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate linear infinite;
+}
+
+.orbit-1 {
+    width: 100px;
+    height: 100px;
+    animation-duration: 6s;
+}
+
+.orbit-2 {
+    width: 160px;
+    height: 160px;
+    animation-duration: 8s;
+}
+
+.orbit-3 {
+    width: 220px;
+    height: 220px;
+    animation-duration: 10s;
+}
+
+.orbit-4 {
+    width: 280px;
+    height: 280px;
+    animation-duration: 12s;
+}
+
+@keyframes rotate {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/*
+    .orbit-label { ... } -> Styles for the text labels (EDIT, DESIGN, etc.).
+*/
+.orbit-label {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--primary-color);
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 0.85rem;
+    box-shadow: 0 0 8px rgba(123, 0, 145, 0.6);
+}
