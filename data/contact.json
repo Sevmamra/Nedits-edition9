@@ -1,0 +1,98 @@
+{
+  "contact": {
+    "title": "Let's Create Something Amazing",
+    "subtitle": "Get in touch with our team to discuss your project",
+    "methods": [
+      {
+        "type": "email",
+        "icon": "mail.svg",
+        "heading": "Email Us",
+        "value": "contact@nedits.com"
+      },
+      {
+        "type": "phone",
+        "icon": "phone.svg",
+        "heading": "Call Us",
+        "value": "+91 98765 43210"
+      },
+      {
+        "type": "address",
+        "icon": "map-pin.svg",
+        "heading": "Visit Us",
+        "value": "123 Creative Street, Digital Nagar, Mumbai 400001"
+      }
+    ],
+    "socialLinks": [
+      {
+        "platform": "Facebook",
+        "url": "#",
+        "icon": "facebook.svg"
+      },
+      {
+        "platform": "Instagram",
+        "url": "#",
+        "icon": "instagram.svg"
+      },
+      {
+        "platform": "Twitter",
+        "url": "#",
+        "icon": "twitter.svg"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "#",
+        "icon": "linkedin.svg"
+      },
+      {
+        "platform": "YouTube",
+        "url": "#",
+        "icon": "youtube.svg"
+      }
+    ],
+    "formFields": [
+      {
+        "type": "text",
+        "id": "name",
+        "name": "name",
+        "label": "Your Name",
+        "required": true
+      },
+      {
+        "type": "email",
+        "id": "email",
+        "name": "email",
+        "label": "Email Address",
+        "required": true
+      },
+      {
+        "type": "tel",
+        "id": "phone",
+        "name": "phone",
+        "label": "Phone Number (Optional)",
+        "required": false
+      },
+      {
+        "type": "select",
+        "id": "service",
+        "name": "service",
+        "label": "Service Interested In",
+        "required": true,
+        "options": [
+          {"value": "design", "text": "Graphic Design"},
+          {"value": "web", "text": "Web Development"},
+          {"value": "video", "text": "Video Editing"},
+          {"value": "marketing", "text": "Digital Marketing"},
+          {"value": "other", "text": "Other Services"}
+        ]
+      },
+      {
+        "type": "textarea",
+        "id": "message",
+        "name": "message",
+        "label": "Your Message",
+        "rows": 5,
+        "required": true
+      }
+    ]
+  }
+}
