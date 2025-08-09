@@ -1,0 +1,44 @@
+/* ======================================
+    Navbar Styles
+====================================== */
+
+/*
+    .navbar { ... } -> Styles for the main navigation bar.
+    position: sticky; -> Keeps the navbar fixed at the top as the user scrolls.
+    z-index: 999; -> Ensures the navbar is always on top of other content.
+*/
+.navbar {
+    background: var(--dark-bg);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/*
+    .nav-links { ... } -> A flexbox container for the navigation links.
+    justify-content: center; -> Centers the links horizontally.
+    gap: 30px; -> Adds a 30px space between each link.
+*/
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    list-style: none;
+}
+
+/*
+    .nav-links a { ... } -> Styles for each navigation link.
+*/
+.nav-links a {
+    color: #eee;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--accent-color); /* Changes color on hover or when the link is active */
+}
