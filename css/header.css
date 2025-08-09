@@ -1,0 +1,111 @@
+/* ======================================
+    Header Styles
+====================================== */
+
+/*
+    header { ... } -> Styles for the main header section.
+    background: linear-gradient(...); -> Applies a dynamic, animated gradient background.
+    animation: gradientShift 15s ease infinite; -> Animates the background position for a shifting effect.
+*/
+header {
+    position: relative;
+    overflow: hidden;
+    padding: 15px 0;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(120deg, #ff6a00, #ee0979, #8a2be2, #3a86ff);
+    background-size: 300% 300%;
+    animation: gradientShift 15s ease infinite;
+}
+
+/*
+    header::before { ... } -> Creates a pseudo-element for a glowing, rotating light effect behind the header content.
+    z-index: 1; -> Puts this glow behind the actual header content.
+*/
+header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(255,255,255,0.20) 0%, transparent 70%);
+    animation: rotateLight 25s linear infinite;
+    z-index: 1;
+    filter: blur(2px);
+}
+
+/*
+    .header-container { ... } -> Flexbox container for the logo and title image.
+    gap: 12px; -> Adds a 12px space between the logo and title.
+*/
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    position: relative;
+    z-index: 2;
+}
+
+/*
+    .logo { ... } -> Styles for the logo image.
+    filter: drop-shadow(...); -> Adds a shadow to the logo to make it stand out.
+*/
+.logo {
+    height: 80px;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.45));
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarges the logo on hover */
+}
+
+/*
+    .header-title-img { ... } -> Styles for the "NEDITS Edition" title image.
+*/
+.header-title-img {
+    height: 105px;
+    transition: transform 0.3s ease;
+}
+
+.header-title-img:hover {
+    transform: scale(1.05); /* Slightly enlarges the title on hover */
+}
+
+/*
+    .tagline { ... } -> Styles for the "Your Creative Digital Partner" text.
+    animation: fadeInUp 1.2s ease forwards; -> Animates the tagline to fade in and move up.
+*/
+.tagline {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: -8px;
+    animation: fadeInUp 1.2s ease forwards;
+}
+
+/* Mobile Styles for the header */
+@media (max-width: 767px) {
+    .logo { height: 95px; }
+    .header-title-img { height: 125px; }
+    .tagline { font-size: 18px; }
+    .header::before { background: radial-gradient(circle at center, rgba(255,255,255,0.40) 0%, transparent 70%); }
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes rotateLight {
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(15px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
