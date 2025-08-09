@@ -1,0 +1,100 @@
+/* ======================================
+    Timeline Section
+====================================== */
+
+/*
+    #journey { ... } -> Styles for the journey section.
+*/
+#journey {
+    padding: 80px 20px;
+}
+
+#journey .section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--text-color);
+    margin-bottom: 40px;
+}
+
+/*
+    .timeline { ... } -> Main container for the timeline.
+*/
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 40px;
+}
+
+/*
+    .vertical-line { ... } -> The animated vertical line in the timeline.
+    animation: growLine 2.5s ease-out forwards; -> Animates the line to grow from the top.
+*/
+.vertical-line {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
+    animation: growLine 2.5s ease-out forwards;
+}
+
+/*
+    .timeline-item { ... } -> Styles for each point on the timeline.
+    opacity: 0; animation: fadeIn ...; -> Makes each item fade in with a delay.
+*/
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/*
+    .timeline-item:nth-child(...) { ... } -> Applies a staggered animation delay to each item.
+*/
+.timeline-item:nth-child(2) { animation-delay: 1s; }
+.timeline-item:nth-child(3) { animation-delay: 2s; }
+.timeline-item:nth-child(4) { animation-delay: 3s; }
+
+/*
+    .timeline-dot { ... } -> The small circular dot on the timeline.
+*/
+.timeline-dot {
+    position: absolute;
+    left: 14px;
+    top: 6px;
+    width: 14px;
+    height: 14px;
+    background: var(--primary-color);
+    border-radius: 50%;
+}
+
+/*
+    .timeline-content { ... } -> The content box for each timeline item.
+    box-shadow: 0 0 10px rgba(123, 0, 145, 0.5); -> Adds a shadow.
+*/
+.timeline-content {
+    margin-left: 40px;
+    background: var(--dark-bg);
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(123, 0, 145, 0.5);
+}
+
+.timeline-content h4 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+/* Animations for the timeline */
+@keyframes growLine {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
