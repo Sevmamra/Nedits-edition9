@@ -1,0 +1,66 @@
+{
+  "footer": {
+    "aboutText": "Your Creative Digital Partner helping businesses grow through innovative design and technology solutions.",
+    "quickLinks": [
+      {"text": "Home", "url": "#home"},
+      {"text": "Services", "url": "#services"},
+      {"text": "About Us", "url": "#about"},
+      {"text": "Success Stories", "url": "#testimonials"},
+      {"text": "Get in Touch", "url": "#contact"}
+    ],
+    "services": [
+      {"text": "Graphic Design", "url": "#"},
+      {"text": "Web Development", "url": "#"},
+      {"text": "Video Editing", "url": "#"},
+      {"text": "Digital Marketing", "url": "#"},
+      {"text": "Branding", "url": "#"}
+    ],
+    "contactInfo": [
+      {
+        "type": "email",
+        "icon": "mail.svg",
+        "value": "contact@nedits.com",
+        "url": "mailto:contact@nedits.com"
+      },
+      {
+        "type": "phone",
+        "icon": "phone.svg",
+        "value": "+91 98765 43210",
+        "url": "tel:+919876543210"
+      },
+      {
+        "type": "address",
+        "icon": "map-pin.svg",
+        "value": "123 Creative Street, Digital Nagar, Mumbai 400001",
+        "url": "#"
+      }
+    ],
+    "socialLinks": [
+      {
+        "platform": "Facebook",
+        "url": "#",
+        "icon": "facebook.svg"
+      },
+      {
+        "platform": "Instagram",
+        "url": "#",
+        "icon": "instagram.svg"
+      },
+      {
+        "platform": "Twitter",
+        "url": "#",
+        "icon": "twitter.svg"
+      },
+      {
+        "platform": "LinkedIn",
+        "url": "#",
+        "icon": "linkedin.svg"
+      },
+      {
+        "platform": "YouTube",
+        "url": "#",
+        "icon": "youtube.svg"
+      }
+    ]
+  }
+}
