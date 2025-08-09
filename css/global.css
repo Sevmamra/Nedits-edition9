@@ -1,0 +1,174 @@
+/* ======================================
+    Global Reset & Body 
+====================================== */
+
+/*
+    * { ... } -> This is the Universal Selector. It applies these styles to all elements on the page.
+    margin: 0; -> Removes default outer spacing from all elements.
+    padding: 0; -> Removes default inner spacing from all elements.
+    box-sizing: border-box; -> Ensures padding and border are included in the element's total width and height.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    :root -> This pseudo-class targets the document's root element (the <html> tag).
+    --... -> These are CSS Custom Properties, also known as variables. They store values that can be reused throughout the stylesheet.
+*/
+:root {
+    /* Define your color palette here */
+    --primary-color: #7b0091; /* Main brand color, a deep purple */
+    --secondary-color: #ee0979; /* Secondary brand color, a vibrant pink */
+    --accent-color: #ff6a00; /* Accent color, a bright orange for highlights */
+    --text-color: #333; /* Standard text color, a dark gray */
+    --light-bg: #f4f4f4; /* Light background color for sections */
+    --dark-bg: #111; /* Dark background color, used for nav and footer */
+}
+
+body {
+    background: var(--light-bg); /* Sets the body's background to a light gray */
+    color: var(--text-color); /* Sets the default text color to a dark gray */
+    font-family: 'Poppins', sans-serif; /* Sets the default font to Poppins */
+    scroll-behavior: smooth; /* Enables smooth scrolling when clicking on anchor links */
+    min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+    width: 100%; /* Ensures the body does not exceed the viewport width, preventing horizontal scroll */
+    overflow-x: hidden; /* Hides any content that overflows horizontally */
+}
+
+/* ======================================
+    PRELOADER STYLES - UPDATED
+====================================== */
+
+.preloader {
+  position: fixed; /* Fixes the preloader to the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #111; /* Sets the background to a dark color */
+  display: flex;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  z-index: 9999; /* Ensures the preloader is on top of all other elements */
+  transition: all 1s ease;
+}
+
+.preloader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  transform: translateY(-50px);
+}
+
+.preloader-logo {
+  width: 200px; /* Sets the width of the logo */
+  height: auto;
+  animation: float 3s ease-in-out infinite; /* Applies a floating animation */
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.loading-bar {
+  width: 300px;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1); /* Sets a semi-transparent white background for the bar */
+  border-radius: 10px;
+  overflow: hidden; /* Hides any content that exceeds the bar's boundaries */
+  position: relative;
+}
+
+.loading-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%; /* Initially, the progress is 0% */
+  background: linear-gradient(90deg, #7b0091, #ee0979); /* Applies a gradient background */
+  border-radius: 10px;
+  transition: width 0.3s ease; /* Smoothly animates the width change */
+}
+
+.loading-text {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes logoTransition {
+  0% {
+    width: 200px;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px) rotateY(180deg);
+  }
+  100% {
+    width: 80px;
+    opacity: 0;
+    transform: translate(var(--final-x), var(--final-y)) rotateY(360deg);
+  }
+}
+
+/* When preloader is hidden */
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden; /* Hides the element from the viewport and screen readers */
+}
+
+/* When preloader is removed */
+.preloader.removed {
+  display: none; /* Completely removes the preloader element from the page layout */
+}
+
+/*
+    .content-wrapper { ... } -> This wraps the main content of your site.
+    position: relative; -> Positions the element relative to its normal position.
+    z-index: 10; -> Ensures the content wrapper is on top of the footer.
+    background-color: var(--light-bg); -> Sets a light background color.
+}
+*/
+.content-wrapper {
+    position: relative;
+    z-index: 10;
+    background-color: var(--light-bg);
+}
+
+/*
+    .site-footer { ... } -> This is the sticky footer.
+    position: sticky; -> Sticks the footer to the bottom of the viewport as the user scrolls.
+    z-index: 1; -> Places the footer behind the content wrapper.
+}
+*/
+.site-footer {
+    position: sticky;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: var(--dark-bg);
+    color: #fff;
+    padding-top: 100px;
+    margin-top: 0;
+}
