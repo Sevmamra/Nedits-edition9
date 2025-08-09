@@ -1,0 +1,47 @@
+/* ======================================
+    Section Base Styles
+====================================== */
+
+/*
+    .section { ... } -> Generic styles for all major sections on the page.
+*/
+.section {
+    margin: auto;
+    max-width: 1100px; /* Limits the maximum width of the content */
+    padding: 70px 20px; /* Adds internal spacing */
+}
+
+/*
+    .section h2 { ... } -> Styles for the main heading of each section.
+    font-family: 'Days One', sans-serif; -> Uses a specific font for headings.
+*/
+.section h2 {
+    color: var(--text-color);
+    font-family: 'Days One', sans-serif;
+    font-size: 32px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+}
+
+/*
+    .section h2::before { ... } -> Creates a pseudo-element (a vertical line) before the heading text.
+    animation: growLine 0.8s ease-out; -> Animates the line to grow from left to right.
+*/
+.section h2::before {
+    content: '';
+    width: 6px;
+    height: 40px;
+    background: var(--primary-color);
+    margin-right: 15px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s ease-out;
+}
+
+/*
+    .aos-animate::before { ... } -> Activates the animation when the `aos-animate` class is added by the AOS library.
+*/
+.section h2.aos-animate::before {
+    transform: scaleX(1);
+}
